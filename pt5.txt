@@ -1,0 +1,6 @@
+actions load module jac_nlp.use_qa
+actions load module jac_nlp.bi_enc
+actions load module jac_nlp.tfm_ner
+jac run bi_enc.jac -walk load_model -ctx "{\"model_path\": \"dialogue_intent_model_pt4\"}"
+jac run tfm_ner.jac -walk load_model -ctx "{\"model_path\": \"tfm_ner_model\"}"
+sentinel register tesla_ai.jir -set_active true -mode ir
